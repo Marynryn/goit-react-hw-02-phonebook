@@ -16,9 +16,9 @@ handleSubmit = (newContact, filter) =>{
  const{contacts}= this.state;
  const isContactExists = contacts.some((contact) =>contact.name === newContact.name);
  if(isContactExists) {
-alert(`${newContact.name} is already in contacts.`) }
+alert(`${newContact.name} is already in contacts.`); } else{
   this.setState((prevState)=>({contacts:[...prevState.contacts,newContact], filter: filter,}));
-  }
+  }}
   handleDelete= (contactId) =>{
     this.setState((prevState) =>({contacts: prevState.contacts.filter((contact)=> contact.id !== contactId),}));
   }
