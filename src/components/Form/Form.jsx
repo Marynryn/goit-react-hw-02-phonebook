@@ -1,6 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import css from '../Form/Form.module.css';
+
 class Form extends React.Component {
   state = {
     name: '',
@@ -18,10 +19,7 @@ class Form extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     const { name, number } = this.state;
-
-
     this.props.onSubmit(name, number);
-
     this.reset();
   };
 
